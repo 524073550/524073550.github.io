@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="被淹死的鱼">
 <meta property="og:description" content="项目需求 TextView最大显示三行 点击时显示全部内容   实现思路 简单实现 TextView有一个属性maxLines,初始设置最大行数为3,点击时设置最大行数为:Integer.MAX_VALUE. 自定义TextView 自定义属性是否展开内容,设置初始maxLine之为3,最大值为Integer.MAX_VALUE,方便以后复用.   实现过程 简单实现,xml中设置固定行数为3">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-28T06:14:19.341Z">
+<meta property="og:updated_time" content="2018-05-22T07:52:47.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于textview点击收缩的实现方法">
 <meta name="twitter:description" content="项目需求 TextView最大显示三行 点击时显示全部内容   实现思路 简单实现 TextView有一个属性maxLines,初始设置最大行数为3,点击时设置最大行数为:Integer.MAX_VALUE. 自定义TextView 自定义属性是否展开内容,设置初始maxLine之为3,最大值为Integer.MAX_VALUE,方便以后复用.   实现过程 简单实现,xml中设置固定行数为3">
@@ -181,17 +181,17 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/首页" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/标签" rel="section">
+          <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
@@ -201,11 +201,11 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/归档" rel="section">
+          <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -269,7 +269,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-09-15T14:20:53+08:00">
                 2015-09-15
@@ -309,7 +309,8 @@
       
 
       
-        <h4 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h4><ul>
+        <a id="more"></a>
+<h4 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h4><ul>
 <li>TextView最大显示三行</li>
 <li>点击时显示全部内容</li>
 </ul>
@@ -353,51 +354,53 @@
 <blockquote>
 <p>代码实现</p>
 </blockquote>
-<p>public class ShrinkTextView extends TextView {<br>    private boolean shrink;</p>
-<pre><code>public ShrinkTextView(Context context) {
-    this(context, null);
-}
+<pre><code>public class ShrinkTextView extends TextView {
+    private boolean shrink;
 
-public ShrinkTextView(Context context, @Nullable AttributeSet attrs) {
-    this(context, attrs, 0);
-}
-
-public ShrinkTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
-    TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ShrinkTextView);
-    shrink = typedArray.getBoolean(R.styleable.ShrinkTextView_shrink, shrink);
-}
-
-@Override
-public void setOnClickListener(@Nullable OnClickListener l) {
-    super.setOnClickListener(l);
-    if (shrink) {
-        shrink = false;
-        setMaxLines(3);
-    } else {
-        shrink = true;
-        setMaxLines(Integer.MAX_VALUE);
+    public ShrinkTextView(Context context) {
+        this(context, null);
     }
-}
 
-/**
- * 设置是否展开
- *
- * @param isShrink
- */
-public void setTextViewShrink(boolean isShrink) {
-    this.shrink = isShrink;
-}
+    public ShrinkTextView(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
 
-/**
- * 得到textview是否展开
- *
- * @return
- */
-public boolean getTextViewShrink() {
-    return shrink;
-}
-}
+    public ShrinkTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ShrinkTextView);
+        shrink = typedArray.getBoolean(R.styleable.ShrinkTextView_shrink, shrink);
+    }
+
+    @Override
+    public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
+        if (shrink) {
+            shrink = false;
+            setMaxLines(3);
+        } else {
+            shrink = true;
+            setMaxLines(Integer.MAX_VALUE);
+        }
+    }
+
+    /**
+     * 设置是否展开
+     *
+     * @param isShrink
+     */
+    public void setTextViewShrink(boolean isShrink) {
+        this.shrink = isShrink;
+    }
+
+    /**
+     * 得到textview是否展开
+     *
+     * @return
+     */
+    public boolean getTextViewShrink() {
+        return shrink;
+    }
+    }
 </code></pre>
       
     </div>
@@ -484,10 +487,10 @@ public boolean getTextViewShrink() {
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -505,10 +508,10 @@ public boolean getTextViewShrink() {
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/归档">
+                <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -574,7 +577,7 @@ public boolean getTextViewShrink() {
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 

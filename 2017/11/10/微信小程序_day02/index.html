@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="被淹死的鱼">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="一:页面之间的跳转的方式:1: 使用 navigator (这个标签自带点击效果,高亮显示)标签包裹点击的view或者控件,使用方法如下:         &amp;lt;navigator url=&amp;apos;../fruit/logs&amp;apos;&amp;gt;           &amp;lt;view class=&amp;quot;flex-item&amp;quot;&amp;gt;            &amp;lt;view&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序开发笔记-day02 页面的跳转和传值方式">
+<meta property="og:url" content="http://yoursite.com/2017/11/10/微信小程序_day02/index.html">
 <meta property="og:site_name" content="被淹死的鱼">
+<meta property="og:description" content="一:页面之间的跳转的方式:1: 使用 navigator (这个标签自带点击效果,高亮显示)标签包裹点击的view或者控件,使用方法如下:         &amp;lt;navigator url=&amp;apos;../fruit/logs&amp;apos;&amp;gt;           &amp;lt;view class=&amp;quot;flex-item&amp;quot;&amp;gt;            &amp;lt;view&amp;gt">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-22T07:52:17.841Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="被淹死的鱼">
+<meta name="twitter:title" content="微信小程序开发笔记-day02 页面的跳转和传值方式">
+<meta name="twitter:description" content="一:页面之间的跳转的方式:1: 使用 navigator (这个标签自带点击效果,高亮显示)标签包裹点击的view或者控件,使用方法如下:         &amp;lt;navigator url=&amp;apos;../fruit/logs&amp;apos;&amp;gt;           &amp;lt;view class=&amp;quot;flex-item&amp;quot;&amp;gt;            &amp;lt;view&amp;gt">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/10/微信小程序_day02/"/>
 
 
 
 
 
-  <title>被淹死的鱼</title>
+  <title>微信小程序开发笔记-day02 页面的跳转和传值方式 | 被淹死的鱼</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,9 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -256,9 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/10/微信小程序_day02/" itemprop="url">微信小程序开发笔记-day02 页面的跳转和传值方式</a></h1>
+          <h1 class="post-title" itemprop="name headline">微信小程序开发笔记-day02 页面的跳转和传值方式</h1>
         
 
         <div class="post-meta">
@@ -308,9 +309,7 @@
       
 
       
-        
-          
-            <a id="more"></a>
+        <a id="more"></a>
 <h2 id="一-页面之间的跳转的方式"><a href="#一-页面之间的跳转的方式" class="headerlink" title="一:页面之间的跳转的方式:"></a>一:页面之间的跳转的方式:</h2><pre><code>1: 使用 navigator (这个标签自带点击效果,高亮显示)标签包裹点击的view或者控件,使用方法如下:
         &lt;navigator url=&apos;../fruit/logs&apos;&gt;
           &lt;view class=&quot;flex-item&quot;&gt;
@@ -418,8 +417,6 @@ jump:function(event){
     参数        类型        必填        说明
     url            String      是            需要跳转的 tabBar 页面的路径（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数
 </code></pre>
-          
-        
       
     </div>
     
@@ -436,349 +433,28 @@ jump:function(event){
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/10/谈谈asynctask/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zhuke">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="被淹死的鱼">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/12/10/谈谈asynctask/" itemprop="url">谈谈AsyncTask</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-10T14:44:21+08:00">
-                2016-12-10
-              </time>
+              <a href="/2016/12/10/谈谈asynctask/" rel="next" title="谈谈AsyncTask">
+                <i class="fa fa-chevron-left"></i> 谈谈AsyncTask
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>由于Android的特性,如果要执行耗时操作,必须在非ui线程执行.除了Thread 和 Runnable 的方式开启子线程外,Android扮演线程角色的有很多,这篇博客就来谈谈其中的一种————AsyncTask,一个执行异步任务的类,底层采用线程池实现的.</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/12/10/谈谈asynctask/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/15/关于textview点击收缩实现方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zhuke">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="被淹死的鱼">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/09/15/关于textview点击收缩实现方法/" itemprop="url">关于textview点击收缩的实现方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-09-15T14:20:53+08:00">
-                2015-09-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <a id="more"></a>
-<h4 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h4><ul>
-<li>TextView最大显示三行</li>
-<li>点击时显示全部内容</li>
-</ul>
-<hr>
-<h4 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h4><ul>
-<li>简单实现 TextView有一个属性maxLines,初始设置最大行数为3,点击时设置最大行数为:Integer.MAX_VALUE.</li>
-<li>自定义TextView 自定义属性是否展开内容,设置初始maxLine之为3,最大值为Integer.MAX_VALUE,方便以后复用.</li>
-</ul>
-<hr>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><ul>
-<li><p>简单实现,xml中设置固定行数为3</p>
-<blockquote>
-<p>xml</p>
-</blockquote>
-  <textview android:id="@+id/text_view" android:clickable="true" android:layout_margin="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxlines="3" android:ellipsize="end" android:text="">
-
-</textview></li>
-</ul>
-<blockquote>
-<p>代码实现</p>
-</blockquote>
-<pre><code>final TextView viewById = (TextView) findViewById(R.id.text_view);
-        viewById.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isOpen){
-                    isOpen =false;
-                    viewById.setMaxLines(3);
-                }else {
-                    isOpen =true;
-                    viewById.setMaxLines(Integer.MAX_VALUE);
-                }
-            }
-        });
-</code></pre><p>注意事项:点击时记录文本展开状态</p>
-<ul>
-<li><p>自定义TextView</p>
-<p>  为什么会想到使用自定义textview?主要是为了方便以后使用,在这里我们的需求只是单独一个textview展开,但是在实际开发的过程中并不会如此简单如果我们在listview中每个item中都有一个这样的textview,那么我们如果使用简单实现的方法也可以实现,但是我们需要记录每一个item的展开状态,再有就是复用的问题,这里我想到了自定义一个TextView,给它一个特定的状态属性,那么在复杂布局中就不用担心复用的问题了.</p>
-</li>
-</ul>
-<blockquote>
-<p>代码实现</p>
-</blockquote>
-<pre><code>public class ShrinkTextView extends TextView {
-    private boolean shrink;
-
-    public ShrinkTextView(Context context) {
-        this(context, null);
-    }
-
-    public ShrinkTextView(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public ShrinkTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ShrinkTextView);
-        shrink = typedArray.getBoolean(R.styleable.ShrinkTextView_shrink, shrink);
-    }
-
-    @Override
-    public void setOnClickListener(@Nullable OnClickListener l) {
-        super.setOnClickListener(l);
-        if (shrink) {
-            shrink = false;
-            setMaxLines(3);
-        } else {
-            shrink = true;
-            setMaxLines(Integer.MAX_VALUE);
-        }
-    }
-
-    /**
-     * 设置是否展开
-     *
-     * @param isShrink
-     */
-    public void setTextViewShrink(boolean isShrink) {
-        this.shrink = isShrink;
-    }
-
-    /**
-     * 得到textview是否展开
-     *
-     * @return
-     */
-    public boolean getTextViewShrink() {
-        return shrink;
-    }
-    }
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -788,10 +464,11 @@ jump:function(event){
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -799,6 +476,10 @@ jump:function(event){
 
 
           
+
+  
+
+
 
         </div>
         
@@ -819,8 +500,17 @@ jump:function(event){
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -862,6 +552,22 @@ jump:function(event){
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-页面之间的跳转的方式"><span class="nav-number">1.</span> <span class="nav-text">一:页面之间的跳转的方式:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-页面跳转传值的问题"><span class="nav-number">2.</span> <span class="nav-text">二:页面跳转传值的问题:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"> </span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1002,6 +708,10 @@ jump:function(event){
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
